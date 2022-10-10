@@ -7,7 +7,7 @@ function changeBackground(color) {
  window.addEventListener("load",function() { changeBackground('white') });
 
 var current = null;
-document.querySelector('#email').addEventListener('click', function(e) {
+document.querySelector('#email').addEventListener('focus', function(e) {
   if (current) current.pause();
   current = anime({
     targets: 'path',
@@ -23,7 +23,7 @@ document.querySelector('#email').addEventListener('click', function(e) {
     }
   });
 });
-document.querySelector('#password').addEventListener('click', function(e) {
+document.querySelector('#password').addEventListener('focus', function(e) {
   if (current) current.pause();
   current = anime({
     targets: 'path',
@@ -39,7 +39,7 @@ document.querySelector('#password').addEventListener('click', function(e) {
     }
   });
 });
-document.querySelector('#submit').addEventListener('click', function(e) {
+document.querySelector('#submit').addEventListener('focus', function(e) {
   if (current) current.pause();
   current = anime({
     targets: 'path',
@@ -55,3 +55,4 @@ document.querySelector('#submit').addEventListener('click', function(e) {
     }
   });
 });
+
